@@ -21,9 +21,13 @@ weatherTime.controller('forecastController', ['$scope', '$routeParams', 'forecas
 	$scope.days = $routeParams.days || '2';
 
 	$scope.weatherResult = weatherService.GetWeather($scope.city, $scope.days);
-
+	console.log($scope.weatherResult);
 	$scope.convertToF = function (degs){
 		return Math.round((1.8 * (degs - 273)) + 32);
+	};
+
+	$scope.convertToC = function (degs){
+		return Math.round(degs - 273);
 	};
 
 	$scope.convertDate = function (dt){

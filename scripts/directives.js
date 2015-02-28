@@ -6,6 +6,7 @@ weatherTime.directive('weatherResults', function (){
 		scope: {
 			weatherDets: '=',
 			convertToStand: '&',
+			convertToC: '&',
 			convertToDate: '&',
 			dateFormat: '@',
 		}

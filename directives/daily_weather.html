@@ -3,6 +3,8 @@
 		<h3 class="panel-title">{{ convertToDate({dt: weatherDets.dt}) | date: dateFormat }}</h3>
 	</div>
 	<div class="panel-body">
-		Daytime temperature: {{ convertToStand({degs: weatherDets.temp.day}) }}
+		<h4>Daily temperature:</h4>
+		<p>Fahrenheit {{ convertToStand({degs: weatherDets.temp.day}) }}° / Celsius {{ convertToC({degs: weatherDets.temp.day}) }}°</p>
+		<p ng-repeat="det in weatherDets.weather"><img src="http://openweathermap.org/img/w/{{det.icon}}.png"> {{ det.description }}</p> 
 	</div>
 </div>
